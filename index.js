@@ -84,7 +84,7 @@ Use the addFlavor function below to do the following:
 
 function addFlavor(array, string){
   array.unshift(string)
-  return(array);
+  return array;
 }
 
 
@@ -171,8 +171,9 @@ function filterByWord(array, string){
  const flavArray =[];
 for(let i = 0; i < array.length; i++)
   if(array[i].includes(string)){
-    return flavArray;
+  flavArray.push(array[i]);
   }
+  return flavArray;
 }
 // not sure where I went wrong here. Tests say it expects 8 and received one? not really sure.
 
